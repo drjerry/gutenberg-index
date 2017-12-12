@@ -21,3 +21,22 @@ The tools here attempt something much simpler: convert the file tree of XML
 into a file of pruned JSON files. Then tools like
 [jq-1.5](https://stedolan.github.io/jq/manual/v1.5/)
 can be used to query on basically any field.
+
+
+## Usage
+
+The main script targets Python 3 and requires `lxml` as its only dependency.
+
+    $ virtualenv -p python3 venv
+    $ source venv/bin/activate
+    $ pip install lxml
+
+The next command will create a `$HOME/gutenberg` folder on your system,
+fetch the latest archive index, and extract it to index.jsonl in that folder.
+
+    $ sh index.sh
+
+
+## License
+
+BSD 2-Clause 
